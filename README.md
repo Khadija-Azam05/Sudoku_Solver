@@ -1,36 +1,33 @@
 # 🧩 Sudoku Solver using CSP (Backtracking + AC-3)
 
 ## 📌 Introduction
-This project is a Sudoku solver based on the concept of **Constraint Satisfaction Problem (CSP)**.  
-It solves 9×9 Sudoku puzzles using **Backtracking Search**, **Forward Checking**, and **AC-3 algorithm**.
+This project solves a 9×9 Sudoku puzzle using **Constraint Satisfaction Problem (CSP)** techniques.  
+It combines **Backtracking Search**, **Forward Checking**, and the **AC-3 algorithm** to efficiently find solutions.
 
+---
 
 ## ⚙️ CSP Representation
 - **Variables:** 81 cells (A1 to I9)  
 - **Domains:** Numbers 1–9  
-- **Constraints:** No repeated numbers in any row, column, or 3×3 box  
+- **Constraints:** Each number must be unique in every row, column, and 3×3 box  
 
+---
 
-## 🧠 Methods Used
-- **Backtracking Search:** Tries values recursively and backtracks on failure  
-- **Forward Checking:** Removes invalid values early after assignment  
-- **AC-3 Algorithm:** Enforces arc consistency before and during search  
-- **MRV Heuristic:** Selects the cell with the fewest possible values  
+## 🧠 Techniques Used
+- **Backtracking Search:** Recursively assigns values and backtracks on conflicts  
+- **Forward Checking:** Eliminates invalid values after each assignment  
+- **AC-3 Algorithm:** Enforces arc consistency to reduce search space  
+- **MRV Heuristic:** Selects the variable with the minimum remaining values first  
 
+---
 
-## 📊 Results & Discussion
-The solver was tested on four puzzles: **easy, medium, hard, and very hard**.
+## 📊 Results
+The solver was tested on puzzles of different difficulty levels:
 
 - **Easy:** Solved quickly with minimal backtracking  
 - **Medium:** Required moderate backtracking  
-- **Hard:** Required significant search and failures  
+- **Hard:** Needed deeper search and more backtracking  
 - **Very Hard:** Heavily dependent on backtracking  
 
-👉 As difficulty increases, backtracking calls and failures increase, while AC-3 becomes less effective alone.
-
-
-## 🎯 Conclusion
-This project demonstrates that Sudoku can be efficiently solved using CSP techniques.  
-Backtracking ensures correctness, while AC-3 reduces unnecessary search, making it much faster than brute-force methods.
-
-
+**Observation:**  
+As difficulty increases, backtracking increases, while AC-3 alone becomes less effective.
