@@ -1,27 +1,24 @@
 # 🧩 Sudoku Solver using CSP (Backtracking + AC-3)
 
-## 📌 Introduction
+## Introduction
 This project solves a 9×9 Sudoku puzzle using **Constraint Satisfaction Problem (CSP)** techniques.  
 It combines **Backtracking Search**, **Forward Checking**, and the **AC-3 algorithm** to efficiently find solutions.
 
----
 
-## ⚙️ CSP Representation
+## CSP Representation
 - **Variables:** 81 cells (A1 to I9)  
 - **Domains:** Numbers 1–9  
 - **Constraints:** Each number must be unique in every row, column, and 3×3 box  
 
----
 
-## 🧠 Techniques Used
+## Techniques Used
 - **Backtracking Search:** Recursively assigns values and backtracks on conflicts  
 - **Forward Checking:** Eliminates invalid values after each assignment  
 - **AC-3 Algorithm:** Enforces arc consistency to reduce search space  
 - **MRV Heuristic:** Selects the variable with the minimum remaining values first  
 
----
 
-## 📊 Results
+## Results
 The solver was tested on puzzles of different difficulty levels:
 
 - **Easy:** Solved quickly with minimal backtracking  
